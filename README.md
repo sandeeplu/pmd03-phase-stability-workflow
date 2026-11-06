@@ -92,4 +92,4 @@ The notebook produces:
 
 ## Attribution
 
-This workflow is based on the `ex3-phase_stability.ipynb` demonstrator in the `pyiron-node-store/pmd03_demonstrators` repository. Retain the original attribution and confirm the appropriate authorship and redistribution permissions before publishing a derived copy.
+This workflow is based on the `ex3-phase_stability.ipynb` demonstrator in the `pyiron-node-store/pmd03_demonstrators` repository. 
