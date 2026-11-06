@@ -90,6 +90,6 @@ The notebook produces:
 - **Interpolation:** Phase boundaries are inferred from a finite pressure-temperature sampling grid; their accuracy depends on grid density, convergence, and interpolation behaviour.
 - **Knowledge graph:** The notebook explicitly skips knowledge-graph generation because the current `semantikon` parser used by the demonstrator cannot parse the workflow's loop/flow-controller structure.
 
-## Attribution
+## Acknowledgement and Attribution
 
-This workflow is based on the `ex3-phase_stability.ipynb` demonstrator in the `pyiron-node-store/pmd03_demonstrators` repository. 
+This workflow is adapted from the original demonstrator developed by Liam Huber and available in the https://github.com/pyiron-node-store/pmd03_demonstrators repository. The original work is acknowledged, and modifications made in this version are documented where applicable.
