@@ -1,0 +1,43 @@
+{
+  "workflow_environment": "pyiron",
+  "title": "Phase Stability of Lead Using pyiron-workflow and the Quasiharmonic Approximation",
+  "authors": [
+    "Liam Huber"
+  ],
+  "description": "A computational workflow for estimating the pressure- and temperature-dependent phase stability of pure lead (Pb). It compares FCC, HCP and BCC structures by calculating quasiharmonic Helmholtz free energies over volume grids, minimising F(V,T) + PV to obtain Gibbs free energies, and interpolating free-energy crossovers to estimate FCC/HCP and HCP/BCC phase boundaries. The calculations use an EAM interatomic potential and pyiron-workflow with ASE and phonon-related atomistic tools.",
+  "release": "0.1.0",
+  "keywords": [
+    "phase stability",
+    "phase diagram",
+    "lead",
+    "Pb",
+    "FCC",
+    "HCP",
+    "BCC",
+    "Gibbs free energy",
+    "Helmholtz free energy",
+    "quasiharmonic approximation",
+    "phonons",
+    "EAM",
+    "pyiron-workflow",
+    "ASE"
+  ],
+  "categories": [
+    "atomistics"
+  ],
+  "steps": [
+    "Generate FCC, HCP and BCC lead structures at initial volume estimates",
+    "Build reusable Gibbs-free-energy workflows for pressure sweeps",
+    "Calculate quasiharmonic free energies over volume and temperature grids",
+    "Minimise F(V,T) + PV to obtain Gibbs free energies",
+    "Compare FCC/HCP and HCP/BCC Gibbs free-energy differences",
+    "Interpolate free-energy crossovers to estimate phase boundaries",
+    "Plot the pressure-temperature phase-boundary curves"
+  ],
+  "codes": [
+    "ASE",
+    "pyiron-workflow",
+    "pyiron-workflow-atomistics",
+    "LAMMPS/EAM"
+  ]
+}
