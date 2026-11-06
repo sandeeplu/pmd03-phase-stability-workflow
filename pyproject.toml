@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pmd03"
+dynamic = ["version"]
+requires-python = "==3.13.*"
+dependencies = [
+    "aimsgb==1.1.1",
+    "ase==3.29.0",
+    "bagofholding==0.1.16",
+    "flowrep[drawing]==0.6.7",
+    "freud-analysis==3.6.1",
+    "lz-GB-code==0.1.0",
+    "matplotlib==3.11.2",
+    "numpy==2.4.6",
+    "pandas==3.0.6",
+    "pyiron_workflow==0.20.3",
+    "pyiron_workflow_atomistics[phonons]==0.2.2",
+    "rdflib==7.6.0",
+    "semantikon==1.4.4",
+    "structuretoolkit==0.0.47",
+]
+
+[dependency-groups]
+test = [
+    "ipykernel==7.4.0",
+    "coverage==7.16.2",
+    "papermill==2.7.0",
+]
+
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.0.0"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "pmd03/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pmd03"]
+
+[tool.coverage.run]
+source = ["pmd03"]
+# The notebooks run in Jupyter kernel subprocesses
+patch = ["subprocess"]
+parallel = true
+
+[tool.ruff.lint.per-file-ignores]
+# Redundant aliases mark explicit (PEP 484) re-exports of the public API
+"pmd03/api.py" = ["PLC0414"]
