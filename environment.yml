@@ -1,0 +1,11 @@
+name: pmd03-phase-stability
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - jupyterlab
+  - ipykernel
+  - graphviz
+  - pip:
+      - -e .
